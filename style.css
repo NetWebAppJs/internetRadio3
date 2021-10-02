@@ -1,0 +1,172 @@
+body{
+  font-family:Helvetica, Arial, Heiti TC, Microsoft JhengHei, sans-serif;
+  text-align: center;
+  color: white;
+  background:rgb(0,0,0);
+background-image: url(https://64.media.tumblr.com/4164e2cb78faf1963a4b13e3e7ccba81/583f4f2d756e9e6f-47/s640x960/758bbebdee9a9ced00ab608cc7b6f8c34e7f9080.jpg);
+}
+
+header {
+  background:rgba(97,19,19,0.742);
+  color:rgb(180,207,232); 
+}
+
+section {
+  background: rgba(29,68,93,0.921);
+  color:rgb(225,228,102) ;
+}
+
+
+/*video_player */
+/***********
+[16:9]
+640 x 360 (1)
+960 x 540 (2)
+1280 x 720 (3)
+1920 x 1080 (4)
+
+[4:3]
+320 x 240
+400 x 300
+512 x 384 (1)
+640 x 480 (1)
+800 x 600 (2)
+1024x 768 (2)
+************/
+.video_player{
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	width: 100%;
+    margin:0 auto;
+    
+}
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+  .video_player{
+    display: flex;
+    flex-flow: row wrap;
+    max-width:1200px;
+  }
+}
+@media screen and (min-width: 1201px){
+  .video_player{
+    display: flex;
+    flex-flow: row wrap;
+    max-width:1400px;
+  }  
+}
+
+/* video_box */
+.video_box{
+	width:calc(100%);
+  
+}
+@media screen and (min-width: 801px){
+  .video_box{
+    width:calc(75%);
+  }
+}
+.video_box video{
+	width:100%;
+	background: #000000;
+}
+
+/* playlist */
+#playlist{
+	width:100%;
+	height:calc(100%);
+	max-height: 100vh;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	
+}
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+	#playlist{
+	  min-height:420px;
+	  max-height: 620px;/*420px - 620px*/
+	}
+}
+@media screen and (min-width: 1201px) {
+	#playlist{
+	  min-height:620px;
+	  max-height: 820px;/*620px - 820px*/
+	}
+}
+@media screen and (min-width: 801px){
+  #playlist{
+    width:calc(25%);
+  }
+}
+
+#playlist ul{
+	width:calc(100% - 20px); /* 減去 卷軸寬 */
+	list-style-type: none;
+	margin:0;
+	padding:0px 8px;
+	
+}
+#playlist li{
+	text-align:center;
+	font-size:1.25rem;
+	line-height:1.5rem;  
+	background-color:rgba(0,0,0,0.9);
+	padding:8px;
+	background: rgba(57,179,205,0.599);
+
+}
+#playlist a{
+	text-decoration: none;
+	color:rgb(240, 231, 231);
+	font-size: 25px;
+	display:inline-block;
+	position: relative;
+}
+#playlist img{
+	width:100%;
+}
+#playlist .title{
+	word-wrap:normal;/**/
+	word-break:break-all;/**/
+	color:#fff;
+}
+#playlist .time{
+	position: absolute;
+	top: 60%; /*60px*/
+	right: 5%; /*20px*/
+	color:#fff;
+	background-color:rgba(0,0,0,0.5);
+	border-radius: 5px;
+	padding:6px;
+}
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+	#playlist .time{
+	  position: absolute;
+	  top:40%;   /*  */
+	}
+}
+@media screen and (min-width: 1201px) {
+	#playlist .time{
+	  position: absolute;
+	  top:50%;   /*  */
+	}
+}
+
+/* 卷軸樣式 */
+#playlist::-webkit-scrollbar-track
+{
+	border: 1px solid black;
+	background-color: #F5F5F5;
+}
+#playlist::-webkit-scrollbar
+{
+	width: 14px;
+	
+	
+	background-color: #F5F5F5;
+}
+
+#playlist::-webkit-scrollbar-thumb
+{
+height: 15px;
+	background-color: #595959;/*#000000*/
+}

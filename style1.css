@@ -1,0 +1,28 @@
+ audio {
+    background: #666;
+    width: 100%;
+    /*padding: 20px;
+    color: #fff;*/
+  }
+  #playlist h2 {
+    margin: 0px;
+  }
+ /* .active a {
+    color:#14f214;
+    text-decoration: none;
+  }
+  ul {
+    list-style-type: none;
+  }*/
+ #playlist, li a {
+   /* color:  #0f5513;*/
+    background: #333;
+   /* padding: 5px;
+    display: block;
+    text-decoration: none;*/
+  }
+  li:not(.active) a:hover {
+    color: #5DB0E6;
+  }
+
+  
